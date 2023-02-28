@@ -1,0 +1,46 @@
+// LOCALHOST
+###
+GET http://localhost:8080/contacts
+###
+GET http://localhost:8080/contacts/63c59c12a48da063f8c2215f
+###
+GET http://localhost:8080/contacts/63c59c12a48da063f8c22161
+###
+GET http://localhost:8080/contacts/63c59c12a48da063f8c22160
+
+### Create contact
+POST http://localhost:8080/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "JohnDoe@test.com",
+    "favoriteColor": "Blue",
+    "birthday": "01/01/1975"
+}
+
+### PUT contact
+PUT http://localhost:8080/contacts/63cab60ff9a2c24f5b7799bb HTTP/1.1
+content-type: application/json
+
+ {
+    "firstName": "Joseph",
+    "lastName": "Angella",
+    "email": "josephangella@gmail.com",
+    "favoriteColor": "Green",
+    "birthday": "5/2/1998"
+  }
+
+### DELETE contact
+DELETE http://localhost:8080/contacts/63cab60ff9a2c24f5b7799bb HTTP/1.1
+
+// PRODUCTION Deploy
+###
+GET https://lesson2-cse-341.onrender.com/contacts
+###
+GET https://lesson2-cse-341.onrender.com/contacts/63c59c12a48da063f8c2215f
+###
+GET https://lesson2-cse-341.onrender.com/contacts/63c59c12a48da063f8c22161
+###
+GET https://lesson2-cse-341.onrender.com/contacts/63c59c12a48da063f8c22160
